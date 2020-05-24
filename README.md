@@ -20,3 +20,11 @@ In the **2D approach**, we break up the 3D MRI volume we've built into many 2D s
 
 In the **3D approach** the size of the MRI volume makes it impossible to pass it in all at once into the model. It would simply take too much memory and computation.  The disadvantage with this 3D approach is that we might still lose important spatial cortex. For instance, if there is a tumor in one sub volume, there is likely to be a tumor in the sub volumes around it too. Since we're passing in sub volumes one at a time into the network, the network will not be able to learn this possibly useful context. The silver lining with the 3D approach is that that we're capturing some context in all of the width, height, and depth mentions. This covers a 3D approach to segmentation.
 
+## Tumor images from MRI taken from random layers. The image is divided into 154 layers. There are four types of tumors
+1. Normal
+2. Endema
+3. Enhancing 
+4. Non-Enhancing
+You can check them [here](https://github.com/lopeselio/Brain-Tumor-Image-Segmentation-For-Magnetic-Resonance-Imaging/blob/master/analysing%20the%203D%20MRI.ipynb)
+
+![1](https://github.com/lopeselio/Brain-Tumor-Image-Segmentation-For-Magnetic-Resonance-Imaging/blob/master/layer%2050%204%20types.PNG)    ![2](https://github.com/lopeselio/Brain-Tumor-Image-Segmentation-For-Magnetic-Resonance-Imaging/blob/master/layer%2054.PNG)
