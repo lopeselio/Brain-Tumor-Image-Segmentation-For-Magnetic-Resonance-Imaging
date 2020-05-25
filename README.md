@@ -40,4 +40,7 @@ The U-Net consists of two paths: a contracting path, and an expanding path. The 
 ### Data Augmentation and loss function 
 One key difference with data augmentation during segmentation is we now have a segmentation output. So when we rotate an input image by 90 degrees to produce a transformed input. We also need to rotate the output segmentations by 90 degrees to get our transformed output segmentation. The second difference is that we now have 3D volumes instead of 2D images. So the transformations have to apply to the whole 3D volume. With this, we almost have all of the pieces necessary to train our brain tumor segmentation model. The final thing we need to look at is the loss function.
 
+<img src="https://github.com/lopeselio/Brain-Tumor-Image-Segmentation-For-Magnetic-Resonance-Imaging/blob/master/dataaugmentation.PNG" height="500" width="500">
+<img src="https://github.com/lopeselio/Brain-Tumor-Image-Segmentation-For-Magnetic-Resonance-Imaging/blob/master/groundtruth%26pred.PNG" height="500" width="500">
+
 A simple 2D example here will allow us to get a quick intuition. Here P represents the output of the segmentation model on 9 pixels. Whereat each location, we have the predicted probability of tumor. G specifies the ground truth on each of these pixel locations. Three of the nine pixels are tumor represented as 1, and the remaining six are normal brain tissue represented as 0.
